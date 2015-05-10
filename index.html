@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Bootstrap Layouts</title>
-        <link rel="stylesheet" href="styles/main.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="styles/main.css">
     </head>
 
     <body>
@@ -78,10 +78,19 @@
                 </div>
               </div>
               <!-- Testing creating my own boxes -->
-              <div class="mypanel">
+              <div id="panel1" class="mypanel">
+                <div class="heading">Welcome</div>
+                <div class="body">
+                  <p>Welcome to this tutorial website. Everything on here has been made my Joel Parkinson while he learns Bootstrap, Jquery and CSS.</p>
+                    <div class="showOnHover">
+                    <a href="#" class="btn btn-xs btn-danger padding" onclick="test()">Delete</a>
+                    </div>
+                </div>
+              </div>
+              <div id="panel2" class="mypanel">
                 <div class="heading">My Header</div>
                 <div class="body">
-                  <p>My Body</body>
+                  <p>My Body</p>
                     <div class="showOnHover">
                     <a href="#" class="btn btn-xs btn-danger padding">Delete</a>
                     </div>
@@ -90,19 +99,8 @@
               <div class="mypanel">
                 <div class="heading">My Header</div>
                 <div class="body">
-                  <p>My Body</body>
-                    <div class="showOnHover">
-                    <a href="#" class="btn btn-xs btn-danger padding">Delete</a>
-                    </div>
-                </div>
-              </div>
-              <div class="mypanel">
-                <div class="heading">My Header</div>
-                <div class="body">
-                  <p>My Body</body>
-                    <div class="showOnHover">
-                    <a href="#" class="btn btn-xs btn-danger padding">Delete</a>
-                    </div>
+                  <p>My Body</p>
+                    <img src="http://joel-dustin.ovh/wordpress/wp-content/uploads/2015/05/road-to-success-816x542.jpg" />
                 </div>
               </div>
           </div>
@@ -111,6 +109,11 @@
 
       <!-- Latest Jquery Implentation -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script>
+      function test(){
+        $("#panel1").slideUp(2000);
+      }
+      </script>
       <!-- Latest compiled and minified JavaScript -->
       <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     </body>
